@@ -11,6 +11,18 @@ func main() {
 
 	userBmi := calculateBmi(userWeight, userHeight)
 
+	if userBmi < 16.0 {
+		fmt.Println("bmi is too small")
+	} else if userBmi >= 16.0 && userBmi < 18.5 {
+		fmt.Println("body mass deficit")
+	} else if userBmi >= 18.5 && userBmi < 25.0 {
+		fmt.Println("bmi is okay")
+	} else if userBmi >= 25.0 && userBmi < 30 {
+		fmt.Println("body mass slightly exceeds target")
+	} else {
+		fmt.Println("body mass significantly exceeds target")
+	}
+
 	fmt.Println(outputResult(userBmi))
 }
 
